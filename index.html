@@ -574,6 +574,15 @@ style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-ra
 </section>
 
 <script>
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+const year = tomorrow.getFullYear();
+const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+const day = String(tomorrow.getDate()).padStart(2, "0");
+
+document.getElementById("bookingDate").min =
+  `${year}-${month}-${day}`;
 function sendBooking() {
   const name = document.getElementById("bookingName").value;
 const phone = document.getElementById("bookingPhone").value;
