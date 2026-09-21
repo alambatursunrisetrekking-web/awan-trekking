@@ -373,13 +373,41 @@ footer strong {
   text-decoration: none;
   margin: 0 10px;
 }
-
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  color: #174d35;
+  cursor: pointer;
+}
 @media (max-width: 800px) {
 
   nav {
     display: none;
   }
 
+  .menu-toggle {
+    display: block;
+  }
+nav {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: white;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+nav.menu-open {
+  display: flex;
+}
+
+nav a {
+  margin: 10px 15px;
+}
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -427,6 +455,14 @@ footer strong {
 </head>
 
 <body>
+
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('menu-open');
+}
+</script>
+
 
 <header>
   <div class="navbar">
