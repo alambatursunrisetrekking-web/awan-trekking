@@ -485,7 +485,54 @@ nav a {
 
 }
 
-/* ===== MODERN TOUR CARDS ===== */
+/* ===== ABOUT HIGHLIGHTS ===== */
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.about-highlights > div {
+    background: #f8f6ef;
+    border: 1px solid #eee7d5;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.about-highlights strong {
+    display: block;
+    color: #174d35;
+    font-size: 15px;
+    margin: 7px 0 5px;
+}
+
+.about-highlights span {
+    display: block;
+    color: #68736d;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-highlights > div {
+        text-align: left;
+        padding: 15px;
+    }
+
+}
+
+
 
 .card {
     position: relative;
@@ -922,30 +969,48 @@ ${note || "None"}`;
 
       <div>
 
-        <h2>Experience Bali With a Local Guide</h2>
+       <h2>Experience Mount Batur With a Local Guide</h2>
 
-        <p>
-          Welcome to <strong>Awan Trekking</strong>, your local adventure
-          partner in Kintamani, Bali.
-        </p>
+<p>
+    Welcome to <strong>Awan Trekking</strong>, a local trekking and adventure
+    service based in Kintamani, Bali.
+</p>
 
-        <p>
-          We provide Mount Batur sunrise trekking, Jeep tours and
-          nature adventures designed for travelers who want to experience
-          Bali from a local perspective.
-        </p>
+<p>
+    Discover Mount Batur with a local guide who knows the mountain,
+    the trails and the best places to enjoy Bali's spectacular sunrise.
+</p>
 
-        <p>
-          Our goal is simple: safe adventures, beautiful experiences,
-          friendly service and unforgettable memories.
-        </p>
+<p>
+    We offer private sunrise trekking, Mount Batur Jeep tours and
+    customized Bali adventures with friendly and personal service.
+</p>
 
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking"
-          target="_blank">
-          CONTACT US
-        </a>
+<div class="about-highlights">
+
+    <div>
+        🏔️ <strong>Local Guide</strong>
+        <span>Experienced local service from Kintamani</span>
+    </div>
+
+    <div>
+        🌅 <strong>Sunrise Experience</strong>
+        <span>Beautiful views of Mount Batur and Bali</span>
+    </div>
+
+    <div>
+        🚙 <strong>Private Tours</strong>
+        <span>Flexible tours for couples, families and groups</span>
+    </div>
+
+</div>
+
+<a
+    class="btn btn-primary"
+    href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking,%20I%20would%20like%20to%20ask%20about%20your%20Mount%20Batur%20tours."
+    target="_blank">
+    CONTACT US
+</a>
 
       </div>
 
