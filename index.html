@@ -514,19 +514,93 @@ function toggleMenu() {
       EXPLORE OUR TOURS
     </a>
 
-    <a
-  class="btn btn-primary"
-  href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking,%20I%20would%20like%20to%20book%20Mount%20Batur%20Sunrise%20Trekking.%0A%0ADate:%0ANumber%20of%20people:%0AHotel:%0A"
-  target="_blank">
-  BOOK NOW
+   <a
+class="btn btn-primary"
+href="#booking">
+BOOK NOW
 </a>
-
   </div>
 
 </section>
 
-<section class="about" id="about">
+<section id="booking" style="padding:70px 20px;background:#f7f7f5;">
+  <div style="max-width:700px;margin:auto;background:white;padding:30px;border-radius:25px;box-shadow:0 8px 30px rgba(0,0,0,.08);">
 
+    <h2 style="text-align:center;color:#164d3b;">
+      Book Your Bali Adventure
+    </h2>
+
+    <p style="text-align:center;color:#666;margin-bottom:30px;">
+      Fill in your details and send your booking directly to Awan Trekking.
+    </p>
+
+    <label>Choose Package</label>
+    <select id="bookingPackage" style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-radius:10px;">
+      <option>Mount Batur Sunrise Trekking</option>
+      <option>Mount Batur Jeep Sunrise Tour</option>
+      <option>Mount Batur Sunset Trekking</option>
+      <option>Private Bali Tour</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" id="bookingDate" style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-radius:10px;">
+
+    <label>Number of People</label>
+    <input type="number" id="bookingGuests" min="1" max="20" placeholder="Number of guests" style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-radius:10px;">
+
+    <label>Hotel / Meeting Point</label>
+    <input type="text" id="bookingHotel" placeholder="Hotel name or meeting point" style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-radius:10px;">
+
+    <label>Hotel Transfer</label>
+    <select id="bookingTransfer" style="width:100%;padding:14px;margin:8px 0 18px;border:1px solid #ddd;border-radius:10px;">
+      <option>Yes, I need hotel transfer</option>
+      <option>No, I will come to the meeting point</option>
+    </select>
+
+    <label>Special Request</label>
+    <textarea id="bookingNote" rows="4" placeholder="Any special request?" style="width:100%;padding:14px;margin:8px 0 25px;border:1px solid #ddd;border-radius:10px;"></textarea>
+
+    <button onclick="sendBooking()" style="width:100%;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-size:17px;font-weight:bold;">
+      💬 SEND BOOKING VIA WHATSAPP
+    </button>
+
+  </div>
+</section>
+
+<script>
+function sendBooking() {
+  const packageName = document.getElementById("bookingPackage").value;
+  const date = document.getElementById("bookingDate").value;
+  const guests = document.getElementById("bookingGuests").value;
+  const hotel = document.getElementById("bookingHotel").value;
+  const transfer = document.getElementById("bookingTransfer").value;
+  const note = document.getElementById("bookingNote").value;
+
+  if (!date || !guests || !hotel) {
+    alert("Please fill in Date, Number of People and Hotel / Meeting Point.");
+    return;
+  }
+
+  const message =
+`🌋 NEW BOOKING – AWAN TREKKING
+
+Package: ${packageName}
+Date: ${date}
+Number of People: ${guests}
+Hotel / Meeting Point: ${hotel}
+Hotel Transfer: ${transfer}
+
+Special Request:
+${note || "None"}`;
+
+  const whatsappURL =
+    "https://wa.me/6285111244457?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+}
+</script>
+
+<section class="about" id="about">
   <div class="container">
 
     <div class="about-grid">
