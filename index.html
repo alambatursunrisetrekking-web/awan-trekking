@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Awan Trekking | Mount Batur Sunrise & Jeep Tour</title>
+
+<meta name="description" content="Awan Trekking offers Mount Batur sunrise trekking, Jeep tours and Bali adventure experiences with a local guide in Kintamani.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d2a24;
+  background: #f7f8f5;
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #174d35;
+}
+
+.logo span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b78628;
+}
+
+nav a {
+  text-decoration: none;
+  color: #24352d;
+  margin-left: 22px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #b78628;
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px 50px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 78px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #ffd36a;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 6px;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: #d5a33a;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b78628;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  color: #174d35;
+}
+
+.section-title p {
+  color: #68756e;
+  margin-top: 8px;
+}
+
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-image {
+  height: 420px;
+  border-radius: 22px;
+  background:
+    url("https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+}
+
+.about h2 {
+  font-size: 38px;
+  color: #174d35;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+  color: #59665f;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-image {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+}
+
+.trekking {
+  background-image:
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85");
+}
+
+.jeep {
+  background-image:
+    url("https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85");
+}
+
+.adventure {
+  background-image:
+    url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1000&q=85");
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card h3 {
+  color: #174d35;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.card p {
+  color: #68756e;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #b78628;
+}
+
+.jeep-prices {
+  background: #173d2b;
+  color: white;
+}
+
+.jeep-prices .section-title h2 {
+  color: white;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.price-box {
+  background: rgba(255,255,255,.1);
+  padding: 25px 18px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+.price-box h3 {
+  color: #ffd36a;
+  margin-bottom: 10px;
+}
+
+.price-box .amount {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.price-box p {
+  font-size: 14px;
+  opacity: .85;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  text-align: center;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.feature h3 {
+  color: #174d35;
+  margin-bottom: 8px;
+}
+
+.booking {
+  background:
+    linear-gradient(rgba(15,55,38,.9),rgba(15,55,38,.9)),
+    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: white;
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.booking p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  opacity: .9;
+}
+
+.contact {
+  background: white;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #174d35;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.contact-info a {
+  color: #174d35;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  background: #10291e;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer strong {
+  color: #ffd36a;
+}
+
+.social {
+  margin: 15px 0;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+
+  nav {
+    display: none;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    padding: 60px 18px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <div class="logo">
+      AWAN TREKKING
+      <span>ADVENTURE • WALKING • NATURE TREKKING</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tours">Tours</a>
+      <a href="#prices">Prices</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>
+      Mount Batur<br>
+      <span>Sunrise Adventure</span>
+    </h1>
+
+    <p>
+      Discover the beauty of Mount Batur with a local guide from Kintamani, Bali.
+    </p>
+
+    <a
+      class="btn btn-primary"
+      href="#tours">
+      EXPLORE OUR TOURS
+    </a>
+
+    <a
+      class="btn btn-whatsapp"
+      href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking%2C%20I%20would%20like%20to%20book%20a%20Mount%20Batur%20tour."
+      target="_blank">
+      BOOK VIA WHATSAPP
+    </a>
+
+  </div>
+
+</section>
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-image"></div>
+
+      <div>
+
+        <h2>Experience Bali With a Local Guide</h2>
+
+        <p>
+          Welcome to <strong>Awan Trekking</strong>, your local adventure
+          partner in Kintamani, Bali.
+        </p>
+
+        <p>
+          We provide Mount Batur sunrise trekking, Jeep tours and
+          nature adventures designed for travelers who want to experience
+          Bali from a local perspective.
+        </p>
+
+        <p>
+          Our goal is simple: safe adventures, beautiful experiences,
+          friendly service and unforgettable memories.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking"
+          target="_blank">
+          CONTACT US
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="tours">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Adventures</h2>
+
+      <p>
+        Choose your perfect Mount Batur experience.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="card-image trekking"></div>
+
+        <div class="card-content">
+
+          <h3>Sunrise Trekking</h3>
+
+          <p>
+            Hike Mount Batur before sunrise and enjoy spectacular
+            views from the mountain.
+          </p>
+
+          <div class="price">
+            Private Tour
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-image jeep"></div>
+
+        <div class="card-content">
+
+          <h3>Mount Batur Jeep</h3>
+
+          <p>
+            Enjoy the sunrise from Mount Batur by 4WD Jeep,
+            combined with volcanic landscapes.
+          </p>
+
+          <div class="price">
+            From IDR 700K / Jeep
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-image adventure"></div>
+
+        <div class="card-content">
+
+          <h3>Bali Adventure</h3>
+
+          <p>
+            Discover waterfalls, coffee plantations, ATV adventures
+            and other beautiful places around Bali.
+          </p>
+
+          <div class="price">
+            Contact us
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="jeep-prices" id="prices">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Mount Batur Jeep Tours</h2>
+
+      <p>
+        Private Jeep experience — maximum 3 people per Jeep.
+      </p>
+
+    </div>
+
+    <div class="price-grid">
+
+      <div class="price-box">
+
+        <h3>TRIP 1</h3>
+
+        <div class="amount">
+          IDR 700K
+        </div>
+
+        <p>
+          Sunrise Only
+        </p>
+
+      </div>
+
+      <div class="price-box">
+
+        <h3>TRIP 2</h3>
+
+        <div class="amount">
+          IDR 800K
+        </div>
+
+        <p>
+          Sunrise + Floating Temple
+        </p>
+
+      </div>
+
+      <div class="price-box">
+
+        <h3>TRIP 3</h3>
+
+        <div class="amount">
+          IDR 800K
+        </div>
+
+        <p>
+          Sunrise + Black Lava
+        </p>
+
+      </div>
+
+      <div class="price-box">
+
+        <h3>TRIP 4</h3>
+
+        <div class="amount">
+          IDR 900K
+        </div>
+
+        <p>
+          Sunrise + Black Lava + Black Sand
+        </p>
+
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:35px;">
+
+      <p>
+        <strong>Important:</strong>
+        The Jeep reaches the middle area of Mount Batur.
+        It does not reach the summit or crater.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Why Travel With Us?</h2>
+
+      <p>
+        Local knowledge. Personal service. Real Bali experience.
+      </p>
+
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+
+        <div class="feature-icon">🏔️</div>
+
+        <h3>Local Guide</h3>
+
+        <p>
+          Experience Mount Batur with a local guide from Kintamani.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon">🌅</div>
+
+        <h3>Sunrise</h3>
+
+        <p>
+          Enjoy unforgettable sunrise views over Bali.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon">🚙</div>
+
+        <h3>Private Jeep</h3>
+
+        <p>
+          Private Jeep adventures for a comfortable experience.
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+        <div class="feature-icon">🤝</div>
+
+        <h3>Personal Service</h3>
+
+        <p>
+          Friendly communication and assistance from booking to tour.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="booking">
+
+  <div class="container">
+
+    <h2>Ready for Your Mount Batur Adventure?</h2>
+
+    <p>
+      Contact us directly and tell us your preferred date,
+      number of people and pickup location.
