@@ -619,14 +619,137 @@ nav a {
 
 <body>
 
-<a href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking,%20I%20would%20like%20to%20book%20a%20Mount%20Batur%20tour."
-   target="_blank"
-   style="position:fixed;bottom:25px;right:18px;width:62px;height:62px;z-index:9999;">
-    <img src="IMG_4817.webp"
-         alt="WhatsApp"
-         style="width:62px;height:62px;object-fit:contain;border-radius:50%;display:block;">
-</a>
+<!-- WhatsApp Floating Widget -->
+<style>
+.whatsapp-widget {
+    position: fixed;
+    right: 18px;
+    bottom: 25px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
 
+.whatsapp-button {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+    background: white;
+    border: none;
+    padding: 0;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.whatsapp-popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    width: 310px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.20);
+    overflow: hidden;
+}
+
+.whatsapp-header {
+    background: #25D366;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.whatsapp-body {
+    padding: 18px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.whatsapp-body p {
+    margin: 0 0 15px;
+}
+
+.whatsapp-send {
+    display: block;
+    text-align: center;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.whatsapp-close {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 18px;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-popup {
+        width: 290px;
+        right: -5px;
+    }
+}
+</style>
+
+<div class="whatsapp-widget">
+
+    <div class="whatsapp-popup" id="whatsappPopup">
+
+        <div class="whatsapp-header">
+            <span class="whatsapp-close" onclick="closeWhatsApp()">×</span>
+            Hallo! 👋
+        </div>
+
+        <div class="whatsapp-body">
+
+            <p>
+                Don't hesitate to reach out with any questions
+                or requests. We are here to help you plan
+                your Mount Batur adventure.
+            </p>
+
+            <p>
+                <strong>Awan Trekking</strong><br>
+                Local Mount Batur Trekking Guide
+            </p>
+
+            <a class="whatsapp-send"
+               href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking,%20I%20would%20like%20to%20book%20a%20Mount%20Batur%20tour."
+               target="_blank">
+                💬 Chat on WhatsApp
+            </a>
+
+        </div>
+    </div>
+
+    <button class="whatsapp-button" onclick="openWhatsApp()">
+        <img src="IMG_4817.webp" alt="WhatsApp">
+    </button>
+
+</div>
+
+<script>
+function openWhatsApp() {
+    document.getElementById("whatsappPopup").style.display = "block";
+}
+
+function closeWhatsApp() {
+    document.getElementById("whatsappPopup").style.display = "none";
+}
+</script>
 <script>
 function toggleMenu() {
   const nav = document.querySelector('nav');
