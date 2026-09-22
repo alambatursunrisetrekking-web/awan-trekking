@@ -1111,39 +1111,227 @@ Amed • Lovina • Padang Bai • Candi Dasa • Tulamben Area
 
 <section class="section">
 
-<h2>➡️ Price Includes</h2>
+<h2> Price Includes</h2>
 
 <div class="includes">
 
-<div class="include">🚗 Private car hotel transfer — pick-up & drop-off</div>
+<style>
+.detailed-includes {
+    position: relative;
+    margin-top: 25px;
+}
 
-<div class="include">🎟️ Kintamani entrance ticket</div>
+.detailed-includes::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    bottom: 25px;
+    width: 3px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #2f6b4f 0,
+        #2f6b4f 8px,
+        transparent 8px,
+        transparent 14px
+    );
+}
 
-<div class="include">🎟️ BKSDA entrance ticket</div>
+.include-detail {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 13px;
+    padding: 15px 14px 15px 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
 
-<div class="include">🥾 English-speaking local guide</div>
+.include-check {
+    width: 44px;
+    height: 44px;
+    margin-left: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #197346;
+    color: white;
+    font-size: 21px;
+    font-weight: 800;
+    z-index: 2;
+}
 
-<div class="include">📸 Photos and videos during the trekking</div>
+.include-detail-content h3 {
+    margin: 2px 0 5px;
+    color: #21633f;
+    font-size: 17px;
+    line-height: 1.25;
+}
 
-<div class="include">🦯 Climbing stick / trekking pole</div>
+.include-detail-content p {
+    margin: 0;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+}
 
-<div class="include">🔦 Flashlight / torch</div>
+@media (max-width: 600px) {
 
-<div class="include">🧺 Picnic mat</div>
+    .detailed-includes::before {
+        left: 22px;
+    }
 
-<div class="include">🛏️ Blanket</div>
+    .include-detail {
+        grid-template-columns: 48px 1fr;
+        gap: 9px;
+        margin-bottom: 10px;
+        padding: 12px 10px 12px 0;
+        border-radius: 14px;
+    }
 
-<div class="include">🥪 Breakfast — sandwich + eggs</div>
+    .include-check {
+        width: 42px;
+        height: 42px;
+        margin-left: 1px;
+        font-size: 19px;
+    }
 
-<div class="include">🍌 Fresh fruit</div>
+    .include-detail-content h3 {
+        font-size: 15px;
+    }
 
-<div class="include">🧃 Fruit juice</div>
+    .include-detail-content p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+}
+</style>
 
-<div class="include">🍫 Chocolate snacks</div>
+<div class="detailed-includes">
 
-<div class="include">☕ Hot drinks — coffee, tea & chocolate</div>
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Private Car Hotel Transfer</h3>
+            <p>Private round-trip transfer from your hotel to Mount Batur and back to your hotel.</p>
+        </div>
+    </div>
 
-<div class="include">💧 Mineral water</div>
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Kintamani Entrance</h3>
+            <p>Entrance fee to the Kintamani area is included in your tour.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>BKSDA Entrance</h3>
+            <p>Mount Batur trekking entrance fee managed by BKSDA is included.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>English-Speaking Local Guide</h3>
+            <p>An experienced local guide will accompany and assist you throughout the trekking experience.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Photos &amp; Videos</h3>
+            <p>Your guide will help capture memorable photos and videos during the tour.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Trekking Pole</h3>
+            <p>A trekking pole is provided to help support you during the ascent and descent.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Flashlight</h3>
+            <p>A flashlight is provided for the early-morning trek before sunrise.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>First Aid Kit (P3K)</h3>
+            <p>A first aid kit is available for basic first-aid needs during the trek.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Picnic Mat</h3>
+            <p>A picnic mat is prepared for you while enjoying breakfast at the summit.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Blanket</h3>
+            <p>A warm blanket is available to keep you comfortable while waiting for sunrise.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Breakfast</h3>
+            <p>Enjoy a simple picnic breakfast at the summit with sandwich and eggs.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Fresh Fruit</h3>
+            <p>Fresh fruit is included as part of your breakfast.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Chocolate Snacks</h3>
+            <p>Chocolate snacks are provided for extra energy during the tour.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Hot Drink</h3>
+            <p>Enjoy a warm drink — Hot Coffee / Tea / Chocolate — while relaxing and watching the sunrise.</p>
+        </div>
+    </div>
+
+    <div class="include-detail">
+        <div class="include-check">✓</div>
+        <div class="include-detail-content">
+            <h3>Mineral Water</h3>
+            <p>Mineral water is provided to keep you hydrated during the trekking experience.</p>
+        </div>
+    </div>
 
 </div>
 
@@ -1154,38 +1342,198 @@ Amed • Lovina • Padang Bai • Candi Dasa • Tulamben Area
 
 <section class="section">
 
-<h2>➡️ Pick-Up Time</h2>
+<h2>➡️ Hotel Pick-Up Schedule</h2>
 
 <p>
-Pick-up times are planned so guests can arrive at Toya Bungkah
-Mount Batur starting point at approximately 04:00 AM.
+Pick-up times are arranged so guests can arrive at Toya Bungkah,
+the Mount Batur starting point, at approximately 04:00 AM.
+Your exact pick-up time will be confirmed after booking.
 </p>
 
-<div class="pickup">
+<style>
+.pickup-timeline {
+    position: relative;
+    margin-top: 25px;
+}
 
-<div>03:15 AM</div>
-<div>Kintamani Area</div>
+.pickup-timeline::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    bottom: 25px;
+    width: 3px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #2f6b4f 0,
+        #2f6b4f 8px,
+        transparent 8px,
+        transparent 14px
+    );
+}
 
-<div>02:15 AM</div>
-<div>Ubud Area • Sidemen Area</div>
+.pickup-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 13px;
+    padding: 15px 14px 15px 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
 
-<div>01:30 AM</div>
-<div>Kuta Area • Seminyak Area • Legian Area • Candidasa Area • Tulamben Area</div>
+.pickup-number {
+    width: 44px;
+    height: 44px;
+    margin-left: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #197346;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    z-index: 2;
+}
 
-<div>01:15 AM</div>
-<div>Canggu Area • Kerobokan Area • Amed Area</div>
+.pickup-content h3 {
+    margin: 2px 0 5px;
+    color: #21633f;
+    font-size: 17px;
+    line-height: 1.25;
+}
 
-<div>01:45 AM</div>
-<div>Sanur Area</div>
+.pickup-time {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 4px 9px;
+    border-radius: 12px;
+    background: #f0f7f3;
+    color: #21633f;
+    font-size: 13px;
+    font-weight: 800;
+}
 
-<div>02:00 AM</div>
-<div>Tejakula Area</div>
+.pickup-content p {
+    margin: 0;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+}
 
-<div>01:00 AM</div>
-<div>Nusa Dua Area • Jimbaran Area</div>
+@media (max-width: 600px) {
 
-<div>12:45 AM</div>
-<div>Uluwatu Area • Lovina Area</div>
+    .pickup-timeline::before {
+        left: 22px;
+    }
+
+    .pickup-item {
+        grid-template-columns: 48px 1fr;
+        gap: 9px;
+        margin-bottom: 10px;
+        padding: 12px 10px 12px 0;
+        border-radius: 14px;
+    }
+
+    .pickup-number {
+        width: 42px;
+        height: 42px;
+        margin-left: 1px;
+        font-size: 17px;
+    }
+
+    .pickup-content h3 {
+        font-size: 15px;
+    }
+
+    .pickup-time {
+        font-size: 12px;
+    }
+
+    .pickup-content p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+}
+</style>
+
+<div class="pickup-timeline">
+
+    <div class="pickup-item">
+        <div class="pickup-number">1</div>
+        <div class="pickup-content">
+            <div class="pickup-time">03:15 AM</div>
+            <h3>Kintamani Area</h3>
+            <p>Early pick-up from your hotel in the Kintamani area.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">2</div>
+        <div class="pickup-content">
+            <div class="pickup-time">02:15 AM</div>
+            <h3>Ubud &amp; Sidemen Area</h3>
+            <p>Pick-up from your accommodation in Ubud or Sidemen.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">3</div>
+        <div class="pickup-content">
+            <div class="pickup-time">01:30 AM</div>
+            <h3>Kuta • Seminyak • Legian</h3>
+            <p>Early pick-up from hotels in Kuta, Seminyak, or Legian.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">4</div>
+        <div class="pickup-content">
+            <div class="pickup-time">01:15 AM</div>
+            <h3>Canggu • Kerobokan • Amed</h3>
+            <p>Pick-up from your accommodation in Canggu, Kerobokan, or Amed.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">5</div>
+        <div class="pickup-content">
+            <div class="pickup-time">01:45 AM</div>
+            <h3>Sanur Area</h3>
+            <p>Pick-up from your hotel in the Sanur area.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">6</div>
+        <div class="pickup-content">
+            <div class="pickup-time">02:00 AM</div>
+            <h3>Tejakula Area</h3>
+            <p>Pick-up from your accommodation in Tejakula.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">7</div>
+        <div class="pickup-content">
+            <div class="pickup-time">01:00 AM</div>
+            <h3>Nusa Dua • Jimbaran</h3>
+            <p>Early pick-up from your hotel in Nusa Dua or Jimbaran.</p>
+        </div>
+    </div>
+
+    <div class="pickup-item">
+        <div class="pickup-number">8</div>
+        <div class="pickup-content">
+            <div class="pickup-time">12:45 AM</div>
+            <h3>Uluwatu • Lovina</h3>
+            <p>Early pick-up from your accommodation in Uluwatu or Lovina.</p>
+        </div>
+    </div>
 
 </div>
 
@@ -1196,39 +1544,188 @@ Mount Batur starting point at approximately 04:00 AM.
 
 <section class="section">
 
-<h2>📌 Special Notes</h2>
+<h2> Special Notes</h2>
 
-<div class="special">
+<style>
+.special-notes {
+    position: relative;
+    margin-top: 25px;
+}
 
-<h3>♨️ Add Hot Spring Experience</h3>
+.special-notes::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    bottom: 25px;
+    width: 3px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #2f6b4f 0,
+        #2f6b4f 8px,
+        transparent 8px,
+        transparent 14px
+    );
+}
 
-<p>
-Relax and enjoy the natural hot springs after your Mount Batur adventure.
-</p>
+.special-note {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 13px;
+    padding: 15px 14px 15px 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
 
-<p>
-<strong>+ IDR 150,000 / person</strong>
-</p>
+.special-number {
+    width: 44px;
+    height: 44px;
+    margin-left: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #197346;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.special-content h3 {
+    margin: 2px 0 5px;
+    color: #21633f;
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+.special-content p {
+    margin: 0;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.special-price {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 4px 9px;
+    border-radius: 12px;
+    background: #fff3e8;
+    color: #e66f00;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+
+    .special-notes::before {
+        left: 22px;
+    }
+
+    .special-note {
+        grid-template-columns: 48px 1fr;
+        gap: 9px;
+        margin-bottom: 10px;
+        padding: 12px 10px 12px 0;
+        border-radius: 14px;
+    }
+
+    .special-number {
+        width: 42px;
+        height: 42px;
+        margin-left: 1px;
+        font-size: 17px;
+    }
+
+    .special-content h3 {
+        font-size: 15px;
+    }
+
+    .special-content p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .special-price {
+        font-size: 12px;
+    }
+}
+</style>
+
+<div class="special-notes">
+
+    <div class="special-note">
+        <div class="special-number">1</div>
+        <div class="special-content">
+            <h3>Hot Spring Option</h3>
+            <p>
+                After the trek, you can add a visit to the Batur Natural Hot Spring
+                for a relaxing experience after your hike.
+            </p>
+            <div class="special-price">+ IDR 150,000 / person</div>
+        </div>
+    </div>
+
+    <div class="special-note">
+        <div class="special-number">2</div>
+        <div class="special-content">
+            <h3>Hotel Pick-Up &amp; Drop-Off</h3>
+            <p>
+                Hotel pick-up and drop-off are provided at the same accommodation.
+            </p>
+        </div>
+    </div>
+
+    <div class="special-note">
+        <div class="special-number">3</div>
+        <div class="special-content">
+            <h3>Without Transfer Option</h3>
+            <p>
+                If you do not need hotel transportation, you can choose our
+                <strong>Mount Batur Private Guide (Without Transfer)</strong> package.
+            </p>
+        </div>
+    </div>
+
+    <div class="special-note">
+        <div class="special-number">4</div>
+        <div class="special-content">
+            <h3>Pick-Up Time</h3>
+            <p>
+                Pick-up time depends on your hotel location. Your exact pick-up
+                time will be confirmed after booking.
+            </p>
+        </div>
+    </div>
+
+    <div class="special-note">
+        <div class="special-number">5</div>
+        <div class="special-content">
+            <h3>Summit Trekking</h3>
+            <p>
+                The trek is guided by an experienced local guide and takes
+                approximately 2 hours to reach the summit at 1,717 meters.
+            </p>
+        </div>
+    </div>
+
+    <div class="special-note">
+        <div class="special-number">6</div>
+        <div class="special-content">
+            <h3>Weather Conditions</h3>
+            <p>
+                Sunrise visibility depends on weather and mountain conditions.
+                Sunrise views cannot be guaranteed.
+            </p>
+        </div>
+    </div>
 
 </div>
-
-
-<h3>🏨 Hotel Pick-Up & Drop-Off</h3>
-
-<p>
-Hotel pick-up and drop-off must be at the same location.
-Please contact us if you require a different drop-off point.
-</p>
-
-
-<h3>🚗 Without Transfer Option</h3>
-
-<p>
-If you have your own transportation or are staying near the starting point,
-we recommend booking our
-<strong>Mount Batur Private Guide (Without Transfer)</strong>
-package.
-</p>
 
 </section>
 
@@ -1237,22 +1734,204 @@ package.
 
 <section class="section">
 
-<h2>🎒 What You Need to Bring</h2>
+<style>
+.bring-items {
+    position: relative;
+    margin-top: 25px;
+}
 
-<ul class="notes">
+.bring-items::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    bottom: 25px;
+    width: 3px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #2f6b4f 0,
+        #2f6b4f 8px,
+        transparent 8px,
+        transparent 14px
+    );
+}
 
-<li>Bag / small backpack</li>
-<li>Enough cash</li>
-<li>Hat</li>
-<li>Mask</li>
-<li>Sweatshirt and pants</li>
-<li>Jacket</li>
-<li>Running shoes or hiking shoes</li>
-<li>Replacement clothes</li>
-<li>Bananas, chocolates or drinks for quick energy</li>
+.bring-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 13px;
+    padding: 15px 14px 15px 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
 
-</ul>
+.bring-number {
+    width: 44px;
+    height: 44px;
+    margin-left: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #197346;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    z-index: 2;
+}
 
+.bring-content h3 {
+    margin: 2px 0 5px;
+    color: #21633f;
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+.bring-content p {
+    margin: 0;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+
+    .bring-items::before {
+        left: 22px;
+    }
+
+    .bring-item {
+        grid-template-columns: 48px 1fr;
+        gap: 9px;
+        margin-bottom: 10px;
+        padding: 12px 10px 12px 0;
+        border-radius: 14px;
+    }
+
+    .bring-number {
+        width: 42px;
+        height: 42px;
+        margin-left: 1px;
+        font-size: 17px;
+    }
+
+    .bring-content h3 {
+        font-size: 15px;
+    }
+
+    .bring-content p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+}
+</style>
+
+<div class="bring-items">
+
+    <div class="bring-item">
+        <div class="bring-number">1</div>
+        <div class="bring-content">
+            <h3>Bag / Small Backpack</h3>
+            <p>
+                Bring a small backpack to carry your personal belongings
+                comfortably during the trek.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">2</div>
+        <div class="bring-content">
+            <h3>Enough Cash</h3>
+            <p>
+                Bring enough cash for personal expenses, souvenirs,
+                or additional activities after the trek.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">3</div>
+        <div class="bring-content">
+            <h3>Hat</h3>
+            <p>
+                A hat is useful for protecting yourself from the sun
+                during the descent and after sunrise.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">4</div>
+        <div class="bring-content">
+            <h3>Mask</h3>
+            <p>
+                A mask can help protect you from dust while walking
+                on the volcanic trail.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">5</div>
+        <div class="bring-content">
+            <h3>Sweatshirt &amp; Pants</h3>
+            <p>
+                Wear warm and comfortable clothing because temperatures
+                can be cold before sunrise.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">6</div>
+        <div class="bring-content">
+            <h3>Jacket</h3>
+            <p>
+                Bring a warm jacket to keep comfortable while waiting
+                for the sunrise at the summit.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">7</div>
+        <div class="bring-content">
+            <h3>Running or Hiking Shoes</h3>
+            <p>
+                Comfortable shoes with good grip are recommended
+                for the volcanic trekking trail.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">8</div>
+        <div class="bring-content">
+            <h3>Replacement Clothes</h3>
+            <p>
+                Bring a change of clothes in case your clothes become
+                wet or dusty during the trek.
+            </p>
+        </div>
+    </div>
+
+    <div class="bring-item">
+        <div class="bring-number">9</div>
+        <div class="bring-content">
+            <h3>Energy Snacks</h3>
+            <p>
+                Bananas, chocolate or other small snacks can help provide
+                extra energy during the climb.
+            </p>
+        </div>
+    </div>
+
+</div>
 </section>
 
 
