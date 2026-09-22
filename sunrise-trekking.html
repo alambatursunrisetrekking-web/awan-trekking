@@ -1733,7 +1733,7 @@ Your exact pick-up time will be confirmed after booking.
 
 <section class="section">
 
-<h2>🎒 What You Need to Bring</h2>
+<h2> What You Need to Bring</h2>
 
 <style>
 .bring-items {
@@ -1937,29 +1937,212 @@ Your exact pick-up time will be confirmed after booking.
 </section>
 
 
-<!-- CTA -->
+<!-- BOOKING -->
 
-<section class="cta" id="booking">
+<section class="booking-section" id="booking">
 
-<h2>🌋 Your Mount Batur Adventure Starts Here</h2>
+<h2> Book Your Mount Batur Trekking</h2>
 
-<p>
-Enjoy an unforgettable private sunrise trekking experience with
-stunning natural scenery and exclusive service.
-Our pickup schedule is arranged to target arrival at the
-Toya Bungkah Mount Batur starting point around 03:30 AM.
+<p class="booking-intro">
+Please fill in the details below. We will contact you via WhatsApp
+to confirm availability and booking details.
 </p>
 
-<a
-class="btn"
-href="https://wa.me/6285111244457?text=Hello%20Awan%20Trekking,%20I%20would%20like%20to%20book%20the%20Mount%20Batur%20Sunrise%20Trekking%20Private%20Tour."
-target="_blank">
+<form id="bookingForm">
 
-BOOK YOUR PRIVATE TREKKING
+<label>Full Name</label>
+<input
+type="text"
+id="fullName"
+placeholder="Your full name"
+required
+>
 
-</a>
+<label>WhatsApp Number</label>
+<input
+type="tel"
+id="whatsapp"
+placeholder="+62 851 1124 4457"
+required
+>
+
+<label>Choose Package</label>
+<input
+type="text"
+value="Mount Batur Sunrise Trekking Private Tour"
+readonly
+>
+
+<label>Date</label>
+<input
+type="date"
+id="tourDate"
+required
+>
+
+<label>Number of People</label>
+<input
+type="number"
+id="people"
+min="1"
+placeholder="Number of guests"
+required
+>
+
+<label>Hotel / Meeting Point</label>
+<input
+type="text"
+id="hotel"
+placeholder="Hotel name or meeting point"
+required
+>
+
+<label>Hotel Transfer</label>
+<select id="transfer" required>
+
+<option value="Yes, I need hotel transfer">
+Yes, I need hotel transfer
+</option>
+
+<option value="No, I will come by myself">
+No, I will come by myself
+</option>
+
+</select>
+
+<label>Special Request</label>
+
+<textarea
+id="specialRequest"
+placeholder="Any special request?"
+rows="4"
+></textarea>
+
+<button type="submit" class="booking-button">
+BOOK NOW
+</button>
+
+</form>
 
 </section>
+
+<style>
+
+.booking-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.booking-section h2 {
+    text-align: center;
+    color: #174d35;
+    margin-bottom: 10px;
+}
+
+.booking-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.booking-section label {
+    display: block;
+    font-size: 18px;
+    margin: 22px 0 9px;
+    color: #222;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 17px 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.booking-section input[readonly] {
+    background: #f3f3f3;
+}
+
+.booking-button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background: #e87532;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+</style>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("fullName").value;
+    const whatsapp = document.getElementById("whatsapp").value;
+    const date = document.getElementById("tourDate").value;
+    const people = document.getElementById("people").value;
+    const hotel = document.getElementById("hotel").value;
+    const transfer = document.getElementById("transfer").value;
+    const specialRequest = document.getElementById("specialRequest").value;
+
+    const message =
+`Hello Awan Trekking,
+
+I would like to make a booking.
+
+BOOKING DETAILS
+
+Package:
+Mount Batur Sunrise Trekking Private Tour
+
+Full Name:
+${name}
+
+WhatsApp Number:
+${whatsapp}
+
+Date:
+${date}
+
+Number of People:
+${people}
+
+Hotel / Meeting Point:
+${hotel}
+
+Hotel Transfer:
+${transfer}
+
+Special Request:
+${specialRequest || "None"}
+
+Thank you.`;
+
+    const url =
+    "https://wa.me/6285111244457?text=" +
+    encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+});
+
+</script>
 
 
 </div>
