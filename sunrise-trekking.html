@@ -397,7 +397,86 @@ footer{
 
 </style>
 </head>
+<style>
+/* MOBILE MENU */
 
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 82%;
+    max-width: 380px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.mobile-menu-header strong {
+    color: #174d35;
+    font-size: 22px;
+}
+
+.mobile-menu-header button {
+    border: none;
+    background: none;
+    color: #174d35;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 17px 10px;
+    color: #174d35;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mobile-menu a:hover {
+    background: #f5f7f5;
+    border-radius: 10px;
+}
+
+.mobile-menu .menu-book {
+    margin-top: 20px;
+    padding: 16px;
+    text-align: center;
+    background: #e87532;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+</style>
 <body>
 
 <header>
@@ -416,13 +495,43 @@ alt="AWAN TREKKING">
 
 </div>
 
-<div class="menu">☰</div>
+<button class="menu" onclick="toggleMenu()">☰</button>
 
 </div>
 
 </header>
 
+<!-- MOBILE MENU -->
 
+<div id="mobileMenu" class="mobile-menu">
+
+<div class="mobile-menu-header">
+
+<strong>AWAN TREKKING</strong>
+
+<button onclick="toggleMenu()">✕</button>
+
+</div>
+
+<a href="index.html"> Home</a>
+
+<a href="#overview"> About Us</a>
+
+<a href="#services"> Our Services</a>
+
+<a href="#gallery"> Gallery</a>
+
+<a href="#travel"> Travel Info</a>
+
+<a href="#contact"> Contact</a>
+
+<a href="#booking" class="menu-book">
+🗓️ BOOK NOW
+</a>
+
+</div>
+
+<div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 <!-- HERO -->
 
 <section class="hero">
@@ -2173,6 +2282,15 @@ src="IMG_4817.webp"
 alt="WhatsApp Awan Trekking">
 
 </a>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const overlay = document.getElementById("menuOverlay");
+
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
